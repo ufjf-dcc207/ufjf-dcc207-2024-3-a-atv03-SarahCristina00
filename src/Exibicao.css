@@ -1,9 +1,15 @@
-.exibicao{
+.exibição{
+    font-weight: 900;
     display: grid;
-    grid-template-areas: "cercado inicio fim";
+    grid-template-areas: 
+    "inicio fim local"
+    "animais animais animais";
+    place-items: center;
     padding: 1em;
     box-shadow: 0.1em 0.2em 0.2 em;
+
     .inicio{
+        
         color: darkgreen;
         grid-area: inicio;
     }
@@ -14,8 +20,14 @@
     }
 
     .local{
+        color:blueviolet;
         font-size: bold;
-        grid-area: cercado;
+        grid-area: local;
+    }
+    .animais{
+        grid-area: animais;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
 }
