@@ -17,8 +17,8 @@ function App() {
   const exB2: ReactNode[] = [];
 
   for(let i =0; i<ANIMAIS.length; i++){
-    let ex=ANIMAIS[i][2] <200.2 ? exA1: exB2;
-    
+    const ex=ANIMAIS[i][2] <200.2 ? exA1: exB2;
+
       ex.push(
         <Animal 
         key={ANIMAIS[i][1]}
@@ -27,7 +27,7 @@ function App() {
         peso={ANIMAIS[i][2]} 
         emExtincao={ANIMAIS[i][3]}
       />
-        );
+      );
 }
   return (
     <div className="app">
